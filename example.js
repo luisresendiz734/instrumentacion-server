@@ -22,4 +22,6 @@ parser.on("data", async (data) => {
       data,
     },
   });
+  const data = res.json();
+  console.log(data);
 });
