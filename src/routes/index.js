@@ -30,9 +30,9 @@ router.post("/", (req, res) => {
   const temperatura = Number(data.substring(ti + 1, hi));
   const humedad = Number(data.substring(hi + 1, di));
   const distancia = Number(data.substring(di + 1));
-  db.ref(TEMP).set(temp);
-  db.ref(HUME).set(hume);
-  db.ref(DIST).set(dist);
+  db.ref(TEMP).set(temperatura);
+  db.ref(HUME).set(humedad);
+  db.ref(DIST).set(distancia);
   res.json({ temperatura, humedad, distancia });
 });
 
