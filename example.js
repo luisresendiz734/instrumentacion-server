@@ -11,7 +11,7 @@ const port = new SerialPort("COM3", {
 
 port.pipe(parser);
 
-const serverUrl = "localhost:4000";
+const serverUrl = "https://sensores-instru.herokuapp.com";
 
 // t30h20d150 temp, humedad, dist
 parser.on("data", async (data) => {

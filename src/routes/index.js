@@ -27,13 +27,13 @@ router.post("/", (req, res) => {
   const ti = data.indexOf("t");
   const hi = data.indexOf("h");
   const di = data.indexOf("d");
-  const temp = Number(data.substring(ti + 1, hi));
-  const hume = Number(data.substring(hi + 1, di));
-  const dist = Number(data.substring(di + 1));
+  const temperatura = Number(data.substring(ti + 1, hi));
+  const humedad = Number(data.substring(hi + 1, di));
+  const distancia = Number(data.substring(di + 1));
   db.ref(TEMP).set(temp);
   db.ref(HUME).set(hume);
   db.ref(DIST).set(dist);
-  res.json({ temp, hume, dist });
+  res.json({ temperatura, humedad, distancia });
 });
 
 module.exports = router;
