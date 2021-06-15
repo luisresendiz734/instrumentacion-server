@@ -5,5 +5,16 @@ POST https://sensores-instru.herokuapp.com HTTP/1.1
 content-type: application/json
 
 {
-    "data": "t7h100d20"
+    "data": "t1h0d0"
+}
+
+###
+GET http://localhost:4000 HTTP/1.1
+
+###
+POST http://localhost:4000 HTTP/1.1
+content-type: application/json
+
+{
+    "data": "t50.1h6.5d6"
 }
