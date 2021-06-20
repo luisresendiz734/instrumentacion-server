@@ -59,6 +59,7 @@ router.post("/", async (req, res) => {
   const th = (await db.ref(KEYS.TH).get()).val();
   const hh = (await db.ref(KEYS.HH).get()).val();
   const dh = (await db.ref(KEYS.DH).get()).val();
+  const motor = (await db.ref("motor").get()).val();
 
   if (t != th[th.length - 1]) db.ref(KEYS.TH).set([...th, t]);
 
@@ -66,7 +67,7 @@ router.post("/", async (req, res) => {
 
   if (d != dh[dh.length - 1]) db.ref(KEYS.DH).set([...dh, d]);
 
-  res.json({ motor: 0 });
+  res.json({ motor });
 });
 
 module.exports = router;

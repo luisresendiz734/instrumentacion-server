@@ -41,7 +41,8 @@ const serverUrl = "https://sensores-instru.herokuapp.com";
 // });
 
 parser.on("data", (data) => {
-  axios.post(serverUrl, { data }).then((data) => {
-    parser.emit("data", data);
-  });
+  console.log(data);
+  // axios.post(serverUrl, { data }).then((data) => {
+  //   parser.emit("data", data);
+  // });
 });

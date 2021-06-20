@@ -5,7 +5,7 @@ POST https://sensores-instru.herokuapp.com HTTP/1.1
 content-type: application/json
 
 {
-    "data": "t1h0d0"
+    "data": "t12h76d34"
 }
 
 ###
