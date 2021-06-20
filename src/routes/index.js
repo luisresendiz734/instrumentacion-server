@@ -40,7 +40,9 @@ router.get("/", async (req, res) => {
   const temperaturaHistory = (await db.ref(KEYS.TH).once("value")).val();
   const humedadHistory = (await db.ref(KEYS.HH).once("value")).val();
   const distanciaHistory = (await db.ref(KEYS.DH).once("value")).val();
+  const motor = (await db.ref("motor").get()).val();
   res.json({
+    motor,
     temperatura,
     temperaturaHistory,
     humedad,
