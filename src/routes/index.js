@@ -69,7 +69,7 @@ router.post("/", async (req, res) => {
 
   if (d != dh[dh.length - 1]) db.ref(KEYS.DH).set([...dh, d]);
 
-  res.json({ motor });
+  res.send(new Buffer(`${motor}`));
 });
 
 module.exports = router;
